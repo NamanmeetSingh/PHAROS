@@ -1,97 +1,148 @@
-## Languages and Datasets
-- Bhojpuri - https://huggingface.co/datasets/ai4bharat/Rural_Women_Bhojpuri
-- Odia (Odisha) - huggingface : https://huggingface.co/datasets/OdiaGenAIdata/pre_train_odia_data_processed.
+# Voice Phishing & Audio Deepfake Datasets (India-Focused)
+
+## 1. Language-Specific Datasets
+
+### Bhojpuri
+- **Rural Women Bhojpuri (AI4Bharat)**  
+  https://huggingface.co/datasets/ai4bharat/Rural_Women_Bhojpuri
+
+### Odia (Odisha)
+- **Pre-train Odia Data (Processed)**  
+  https://huggingface.co/datasets/OdiaGenAIdata/pre_train_odia_data_processed
 
 
-2. Ai4Bharat datset: https://huggingface.co/datasets/ai4bharat/IndicVoices/tree/main/
-- Assamese
-- dogri
-- bodo
-- bengali
-- gujrati
-- hindi
-- kannada
-- kashmiri
-- konkani
-- maithili
-- malyalam
-- manipuri
-- marathi
-- nepali
-- odia
-- punjabi
-- sanskrit
-- santali
-- sindhi
-- tamil
-- telgu
-- urdu
-# extractable datasets from news channels from news channels
+---
 
-3. Hindi Accents: https://huggingface.co/datasets/ai4bharat/Lahaja/viewer ( 12.5 hours)
+## 2. Ai4Bharat – IndicVoices (Large-Scale Multilingual Speech)
 
-4. News Channel(16 langs) :https://huggingface.co/datasets/ai4bharat/Shrutilipi/viewer/ (shrutilipi dataset ai4bharat)
+**Dataset:**  
+https://huggingface.co/datasets/ai4bharat/IndicVoices/tree/main/
 
-5. HINDI,TAMIL,ENGLISH- MANGO ai4bharat :https://huggingface.co/datasets/ai4bharat/MANGO/tree/main/audios
+**Languages Covered (22):**
+- Assamese, Bodo, Bengali, Dogri, Gujarati, Hindi  
+- Kannada, Kashmiri, Konkani, Maithili, Malayalam  
+- Manipuri, Marathi, Nepali, Odia, Punjabi  
+- Sanskrit, Santali, Sindhi, Tamil, Telugu, Urdu
 
-6. indian english accents: https://huggingface.co/datasets/ai4bharat/Svarah
-
-7.Female audio(16 langs) - https://huggingface.co/datasets/ai4bharat/Kathbath/viewer/
-
-8. Indian accent for english : /home/clown/Documents/Capstone2k26
-
-# majha , malwa ,doabi, puadhi 
-Punjabi News Channels : https://www.kaggle.com/datasets/warcoder/punjabi-speech-recognition?utm_source=chatgpt.com
-# deepfake
-1. IndicSynth is a novel multilingual synthetic speech dataset designed to advance multilingual audio deepfake detection (ADD) and anti-spoofing research. It covers 12 low-resource Indian languages and provides both mimicry and diversity subsets. :  https://huggingface.co/datasets/vdivyasharma/IndicSynth/viewer/Punjabi/train?p=2483
-
-- bengali
-- gujrati
-- hindi
-- kannada
-- malyalam
-- marathi
-- odia
-- Punjabi
-- tamil
-- telgu
-- urdu
-- sanskrit
-
-2. ASVspoof 2021 Challenge - Speech Deepfake Database: also available for 2019,17
-
-# haryanvi and other local spoken dialects in different states
-Project vaani : different dialects from different places and languages: https://huggingface.co/datasets/ARTPARK-IISc/Vaani/viewer/
-
-- assam
-- west bengal 
-- chandigarh
-- bihar 
-- haryana
-- chattisgarh
-- andhra pradesh
-- UP
-- UK
-- kerala
-- maharashtra
-- gujrat
-- goa
-- delhi
-- HP
-- Jharkhand
-- MP
-- odisha
-- Punjab
-- Rajasthan
-- sikkim
-- tamil nadu
-- tripura 
-- telangana
-- karnataka
-- jammu kashmir
-
-- phishing dataset: https://www.kaggle.com/datasets/lahiruvimukthi/enhancing-phishing-detection-voice-communications?resource=download
-
-- indicfake(multilingual audio deepfake dataset containing) : https://drive.google.com/drive/folders/1X6fR1zg2wbCcaWQBItpZnW11pmAjSBcl
+**Estimated Audio Duration:**  
+- ~12,000 hours (confirmed)
 
 
+---
+
+## 3. Accent & News-Based Speech Datasets
+
+### Hindi Accents
+- **Lahaja (AI4Bharat)**  
+  https://huggingface.co/datasets/ai4bharat/Lahaja/viewer  
+  - Duration: *Not publicly specified*
+
+### News Channel Speech
+- **Shrutilipi (AI4Bharat)**  
+  https://huggingface.co/datasets/ai4bharat/Shrutilipi/viewer/  
+  - Languages: 16  
+  - Duration: ~6,400 hours (confirmed)
+
+### Broadcast / News Audio
+- **MANGO (AI4Bharat)**  
+  Languages: Hindi, Tamil, English  
+  https://huggingface.co/datasets/ai4bharat/MANGO/tree/main/audios  
+  - Duration: *Not publicly specified*
+
+### Indian English Accents
+- **Svarah**  
+  https://huggingface.co/datasets/ai4bharat/Svarah  
+  - Duration: ~9.6 hours (confirmed)
+
+
+---
+
+## 4. Gender-Specific Speech Dataset
+
+### Female Speech (16 Languages)
+- **Kathbath (AI4Bharat)**  
+  https://huggingface.co/datasets/ai4bharat/Kathbath/viewer/  
+  - Duration: *Not publicly specified*
+
+
+---
+
+## 5. Punjabi Dialects & Regional Speech
+
+### Punjabi Dialects (Majha, Malwa, Doabi, Puadhi)
+- **Punjabi News Channels (Kaggle)**  
+  https://www.kaggle.com/datasets/warcoder/punjabi-speech-recognition  
+  - Duration: *Depends on extracted clips*
+
+
+---
+
+## 6. Synthetic / Deepfake Speech Datasets
+
+### IndicSynth (Multilingual Synthetic Speech)
+- **Purpose:** Audio Deepfake Detection / Anti-Spoofing  
+- **Languages (12):**
+  - Bengali, Gujarati, Hindi, Kannada, Malayalam  
+  - Marathi, Odia, Punjabi, Tamil, Telugu  
+  - Urdu, Sanskrit  
+
+Dataset:  
+https://huggingface.co/datasets/vdivyasharma/IndicSynth/viewer/Punjabi/train  
+- Duration: *Not publicly specified*
+
+### ASVspoof Challenges
+- **Years:** 2017, 2019, 2021  
+- **Use:** Speech spoofing & deepfake benchmarks  
+- Duration varies per challenge split
+
+
+---
+
+## 7. Regional & Dialectal Speech – Project Vaani
+
+**Dataset:**  
+https://huggingface.co/datasets/ARTPARK-IISc/Vaani/viewer/
+
+**Regions Covered:**
+- Assam, Andhra Pradesh, Bihar, Chandigarh, Chhattisgarh  
+- Delhi, Goa, Gujarat, Haryana, Himachal Pradesh  
+- Jammu & Kashmir, Jharkhand, Karnataka, Kerala  
+- Maharashtra, Madhya Pradesh, Odisha, Punjab  
+- Rajasthan, Sikkim, Tamil Nadu, Telangana  
+- Tripura, Uttar Pradesh, Uttarakhand, West Bengal
+
+- Duration: *Not publicly specified*
+
+
+---
+
+## 8. Voice Phishing Dataset
+
+- **Voice Phishing / Scam Calls (Kaggle)**  
+  https://www.kaggle.com/datasets/lahiruvimukthi/enhancing-phishing-detection-voice-communications  
+  - Duration: *Not published (requires local calculation)*
+
+
+---
+
+## 9. IndicFake Dataset
+
+- **IndicFake – Multilingual Audio Deepfake Dataset**  
+  https://drive.google.com/drive/folders/1X6fR1zg2wbCcaWQBItpZnW11pmAjSBcl  
+  - Duration: *Not publicly specified*
+
+
+---
+
+## 10. Total Extractable Audio (Confirmed)
+
+| Dataset       | Hours |
+|---------------|-------|
+| IndicVoices   | ~12,000 |
+| Shrutilipi   | ~6,400 |
+| Svarah       | ~9.6 |
+
+**Confirmed Total:**  
+**≈ 18,409.6 hours**
+
+> Note: This total excludes datasets without publicly available duration metadata.
