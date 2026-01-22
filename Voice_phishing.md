@@ -25,7 +25,7 @@ https://huggingface.co/datasets/ai4bharat/IndicVoices/tree/main/
 - Sanskrit, Santali, Sindhi, Tamil, Telugu, Urdu
 
 **Estimated Audio Duration:**  
-- ~12,000 hours (confirmed)
+- ~23,700 hours (confirmed)
 
 
 ---
@@ -35,7 +35,7 @@ https://huggingface.co/datasets/ai4bharat/IndicVoices/tree/main/
 ### Hindi Accents
 - **Lahaja (AI4Bharat)**  
   https://huggingface.co/datasets/ai4bharat/Lahaja/viewer  
-  - Duration: *Not publicly specified*
+  - Duration: 12.5 hours 
 
 ### News Channel Speech
 - **Shrutilipi (AI4Bharat)**  
@@ -62,7 +62,7 @@ https://huggingface.co/datasets/ai4bharat/IndicVoices/tree/main/
 ### Female Speech (16 Languages)
 - **Kathbath (AI4Bharat)**  
   https://huggingface.co/datasets/ai4bharat/Kathbath/viewer/  
-  - Duration: *Not publicly specified*
+  - Duration: 1,684 hours
 
 
 ---
@@ -72,7 +72,7 @@ https://huggingface.co/datasets/ai4bharat/IndicVoices/tree/main/
 ### Punjabi Dialects (Majha, Malwa, Doabi, Puadhi)
 - **Punjabi News Channels (Kaggle)**  
   https://www.kaggle.com/datasets/warcoder/punjabi-speech-recognition  
-  - Duration: *Depends on extracted clips*
+  - Duration:  94 hours 
 
 
 ---
@@ -87,8 +87,8 @@ https://huggingface.co/datasets/ai4bharat/IndicVoices/tree/main/
   - Urdu, Sanskrit  
 
 Dataset:  
-https://huggingface.co/datasets/vdivyasharma/IndicSynth/viewer/Punjabi/train  
-- Duration: *Not publicly specified*
+https://huggingface.co/datasets/vdivyasharma/IndicSynth/viewer/  
+- Duration: 4,000+ hours of synthetic audio 
 
 ### ASVspoof Challenges
 - **Years:** 2017, 2019, 2021  
@@ -111,7 +111,7 @@ https://huggingface.co/datasets/ARTPARK-IISc/Vaani/viewer/
 - Rajasthan, Sikkim, Tamil Nadu, Telangana  
 - Tripura, Uttar Pradesh, Uttarakhand, West Bengal
 
-- Duration: *Not publicly specified*
+- Duration:  ~31,255 hours
 
 
 ---
@@ -120,7 +120,7 @@ https://huggingface.co/datasets/ARTPARK-IISc/Vaani/viewer/
 
 - **Voice Phishing / Scam Calls (Kaggle)**  
   https://www.kaggle.com/datasets/lahiruvimukthi/enhancing-phishing-detection-voice-communications  
-  - Duration: *Not published (requires local calculation)*
+  - Duration: *Not published*
 
 
 ---
@@ -138,11 +138,16 @@ https://huggingface.co/datasets/ARTPARK-IISc/Vaani/viewer/
 
 | Dataset       | Hours |
 |---------------|-------|
-| IndicVoices   | ~12,000 |
-| Shrutilipi   | ~6,400 |
-| Svarah       | ~9.6 |
+| IndicVoices   | ~23,700 |
+| Shrutilipi    | ~6,400 |
+| Svarah        | ~9.6 |
+| Vaani         | ~31,255 |
+| Indicsynth    | ~4000 |
+| Kathbath      | ~1684 |
+| Punjabi news  | ~94 |
+| Lahaja        | ~12.5 |
 
 **Confirmed Total:**  
-**≈ 18,409.6 hours**
+**≈ 67155.1 hours**
 
 > Note: This total excludes datasets without publicly available duration metadata.
