@@ -1,0 +1,114 @@
+/**
+ * PHAROS Android Build Configuration
+ * 
+ * This build.gradle file configures Android-specific settings for:
+ * - Minimum API level for phone state detection
+ * - Target API level for latest Android features
+ * - Compilation options for Java compatibility
+ * - Dependency management for Flutter packages
+ */
+
+def localProperties = new File(rootDir, 'local.properties')
+def properties = new Properties()
+
+if (localProperties.exists()) {
+    properties.load(localProperties.newDataInputStream())
+}
+
+def flutterRoot = properties.getProperty('flutter.sdk')
+if (flutterRoot == null) {
+    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+}
+
+def flutterVersionCode = properties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '1'
+}
+
+def flutterVersionName = properties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '1.0'
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+
+android {
+    compileSdkVersion 34  // Latest stable Android API
+
+    lintOptions {
+        disable 'InvalidPackage'
+        disable 'MissingPermission'
+    }
+
+    defaultConfig {
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        applicationId "com.pharos.app"
+        
+        // PHAROS requires API 26 for background services
+        // API 31+ required for foreground service microphone type
+        minSdkVersion 26
+        targetSdkVersion 34
+        
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+        
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            signingConfig signingConfigs.debug
+            
+            minifyEnabled false
+            shrinkResources false
+        }
+
+        debug {
+            // Enable debugging tools
+            debuggable true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+
+    packagingOptions {
+        // Required for flutter_background_service
+        pickFirst 'lib/arm64-v8a/libc++_shared.so'
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        pickFirst 'lib/x86/libc++_shared.so'
+        pickFirst 'lib/x86_64/libc++_shared.so'
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    // Kotlin stdlib
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    
+    // AndroidX dependencies
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.core:core:1.10.1'
+    
+    // Multidex support for large apps
+    implementation 'androidx.multidex:multidex:2.0.1'
+    
+    // Required for flutter_background_service
+    implementation 'androidx.work:work-runtime:2.8.1'
+    
+    // Required for phone state detection
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+}

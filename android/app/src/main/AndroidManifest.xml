@@ -1,0 +1,72 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pharos.app">
+
+    <!-- Required Permissions -->
+    
+    <!-- Microphone Access - For audio recording via the main microphone -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    
+    <!-- Phone State Monitoring - To detect incoming/outgoing calls -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    
+    <!-- Foreground Service - To run background service with persistent notification -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    
+    <!-- Microphone Foreground Service Type (Android 12+) -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+    
+    <!-- File Access - To save WAV chunks to storage -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
+    <!-- Internet - For future server communication (optional) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    <!-- Vibration (optional, for alerts) -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:label="pharos"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher">
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Foreground Service for Audio Recording -->
+        <!-- This service runs continuously while a call is active, monitoring microphone input -->
+        <service
+            android:name="com.flutter.background.service.BackgroundService"
+            android:exported="false"
+            android:foregroundServiceType="microphone" />
+
+        <!-- Broadcast Receiver for Phone State Changes -->
+        <!-- Receives intents when call state changes (IDLE, RINGING, OFFHOOK) -->
+        <receiver
+            android:name="android.intent.action.PHONE_STATE"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Flutter Default Configuration -->
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+
+    </application>
+
+</manifest>
